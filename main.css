@@ -10,7 +10,7 @@
     margin-top: -40px;
     width: 100%;
     
-    background-color: #04c45e;
+    background-color: #171717;
     overflow:hidden;
 }
 
@@ -23,25 +23,26 @@
 }
 
 .navbar li a {
-    color: white;
+    color: #ededed;
     display: block;
     padding: 10px;
     padding-top: 15px;
 }
 
 .navbar a:hover:not(.active){
-    background-color: #404040;
+    background-color: #2b2b2b;
 }
 
 .navbar .active {
-    background-color: #00ab55;
+    background-color: #ededed;
+    color: #171717;
 }
 
 .dropdown {
     display: none;
     min-width: 100px;
     box-shadow: 0px 5px 10px 0px #00000012;
-    background-color: #404040;
+    background-color: #2b2b2b;
     z-index: 1;  
     position: absolute;
 }
@@ -66,7 +67,7 @@
 }
 .parallax h1 {
     position: absolute;
-    color: white;
+    color: #ededed;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -92,6 +93,19 @@
     content: "";
     display: table;
     clear:both;
+}
+
+.footer {
+    background-color: #171717;
+    color: #ededed;
+    font-size: 9pt;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.footer p {
+    margin:5px;
 }
 
 @media screen and (max-width:600px) {
