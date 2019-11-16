@@ -1,10 +1,13 @@
 * {
     font-family: sans-serif;
 }
+
+body {
+    margin:0;
+}
 .navbar {
     z-index: 2;
-    width: 100vw;
-    margin-left: -1.35vw;
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
