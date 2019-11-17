@@ -141,13 +141,13 @@ body {
 
 @media (max-aspect-ratio:4/3) {
     h1 {
-        font-size: 72pt;
+        font-size: 112pt;
     }
     h2 {
-        font-size: 48pt;
+        font-size: 72pt;
     }
     p {
-        font-size: 24pt;
+        font-size: 48pt;
     }
     
     .navbar {
