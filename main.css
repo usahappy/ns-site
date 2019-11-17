@@ -152,7 +152,7 @@ body {
     transform: translate(-30%);
 }
 
-@media (max-aspect-ratio:4/3) and {
+@media (max-aspect-ratio:4/3) {
     h1 {
         font-size: 112pt;
     }
