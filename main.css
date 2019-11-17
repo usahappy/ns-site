@@ -7,10 +7,6 @@ body {
     background-color: #ededed;
 }
 
-.mobile-navbar {
-    display: none;
-}
-
 .navbar {
     z-index: 2;
     width: 100%;
@@ -143,7 +139,7 @@ body {
     transform: translate(-30%);
 }
 
-@media (max-aspect-ratio:4/3) and screen (max-width:1024px){
+@media (max-aspect-ratio:4/3) {
     h1 {
         font-size: 72pt;
     }
@@ -156,17 +152,6 @@ body {
     
     .navbar {
         display: none;
-    }
-    
-    .mobile-navbar {
-        background-color: #171717;
-        font-size: 64pt;
-        color: #ededed;
-        padding: 0;
-    }
-    
-    .mobile-navbar a {
-        margin-left: 20px;
     }
     
     .footer p {
