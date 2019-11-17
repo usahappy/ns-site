@@ -1,5 +1,5 @@
 * {
-    font-family: sans-serif;
+    font-family: lato,sans-serif;
 }
 
 body {
@@ -83,6 +83,8 @@ body {
     z-index: 1;
     text-shadow: 0 0 50px black;
     font-size: 64pt;
+    text-align: center;
+    font-weight: 900;
 }
 
 .content {
@@ -150,7 +152,7 @@ body {
     transform: translate(-30%);
 }
 
-@media (max-aspect-ratio:4/3) {
+@media (max-aspect-ratio:4/3) and {
     h1 {
         font-size: 112pt;
     }
