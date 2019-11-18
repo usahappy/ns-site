@@ -153,16 +153,6 @@ body {
 }
 
 @media (max-aspect-ratio:4/3) {
-    h1 {
-        font-size: 112pt;
-    }
-    h2 {
-        font-size: 72pt;
-    }
-    p {
-        font-size: 48pt;
-    }
-    
     .navbar {
         display: none;
     }
@@ -170,13 +160,26 @@ body {
     .footer p {
         font-size: 12pt;
     }
+    
     .content {
         width: 90%;
         margin-left: 5%;
         padding:0;
     }
     
+    .content p {
+        font-size: 20px;
+    }
+    
+    .content h2 {
+        font-size: 40px;
+    }
+    
     .parallax {
         height: 100vw;
+    }
+    
+    .parallax h1 {
+        font-size: 90px;
     }
 }
