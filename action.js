@@ -37,10 +37,11 @@ $(document).ready(function(){
         var url = database.collection("webhooks").doc("slack").get({source:"server"}).then(function(doc) {
             var slackUrl = doc.data().url;
             $.ajax({
-                data: {
+                data: "pauload=" + JSON.stringify({
                     "text":"Hello world!"
-                },
-                contentType: "application/json",
+                }),
+                dataType: "json",
+                processData: false,
                 type: "POST",
                 url: slackUrl,
                 error: function(xhr,status,error){
@@ -52,5 +53,4 @@ $(document).ready(function(){
             });
         })
     });
-
 });
