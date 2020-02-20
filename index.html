@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/bdf8vqg.css">
+        <script src="action.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a id="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Dooley's Bowl</a></li>
+                <li><a href="#">Hall Council</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="headline">
+            <img src="rha-logo.png">
+        </div>
+        
+        <div class="content-section" id="about">
+            <div class="content-column">
+                <h3>Programming</h3>
+                <p>We do stuff. Believe we do stuff. I can't think of any extra filler text to add, and it's way too late to be doing this.</p>
+                <a class="action-btn" href="#">Learn more</a>
+            </div>
+            <div class="content-column">
+                <h3>People</h3>
+                <p>We do stuff. Believe we do stuff. I can't think of any extra filler text to add, and it's way too late to be doing this.</p>
+                <a class="action-btn" href="#">Learn more</a>
+            </div>
+            <div class="content-column">
+                <h3>Advocacy</h3>
+                <p>We do stuff. Believe we do stuff. I can't think of any extra filler text to add, and it's way too late to be doing this.</p>
+                <a class="action-btn" href="#">Learn more</a>
+            </div>
+            <div class="content-column">
+                <h3>Community</h3>
+                <p>We do stuff. Believe we do stuff. I can't think of any extra filler text to add, and it's way too late to be doing this.</p>
+                <a class="action-btn" href="#">Learn more</a>
+            </div>
+        </div>
+        
+        <div class="content-section" id="quote-parallax">
+            <div id="quote">
+                <h3><i>"This is definitely something someone really said about what the purpose of RHA is."</i></h3>
+                <p><i>Akash Kurupassery, RHA President</i></p>
+            </div>
+        </div>
+        
+        <div class="content-section" id="get-involved">
+            <h3>Get Involved</h3>
+            <p>You can get involved with RHA by performing an exorcism in Raoul Hall under the full moon.</p>
+            <a class="action-btn" href="#">Get involved today</a>
+        </div>
+        
+        <div class="footer">
+            <div id="content">
+                <div id="contact">
+                    <h3>Submit a Comment</h3>
+                    <textarea id="comment-card-text" name="Submit a Comment" placeholder="Tell us what you think"></textarea>
+                    <a id="comment-btn" class="action-btn">Submit</a>
+                </div>
+                <div id="social-links">
+                    <ul>
+                        <li><a href="https://www.instagram.com/emoryrha/" title="Instagram" target="_blank"><img src="social/instagram.png"></a></li>
+                        <li><a href="https://www.facebook.com/EmoryRHA/" title="Facebook" target="_blank"><img src="social/facebook.png"></a></li>
+                        <li><a href="#" title="Snapchat" target="_blank"><img src="social/snapchat.png"></a></li>
+                        <li><a href="#" title="Twitter" target="_blank"><img src="social/twitter.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>© 2020 Emory Residence Hall Association</p>
+            </div>
+        </div>
+        
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+            apiKey: "AIzaSyAXSKcHDShpO12DGwFI9TOdK_T320NoaSY",
+            authDomain: "rha-site.firebaseapp.com",
+            databaseURL: "https://rha-site.firebaseio.com",
+            projectId: "rha-site",
+            storageBucket: "rha-site.appspot.com",
+            messagingSenderId: "680785206398",
+            appId: "1:680785206398:web:3e6d27e31837d2432fcc2f",
+            measurementId: "G-XNTQB72031"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            
+            var database = firebase.firestore();
+            /**
+            database.collection("halls").doc("dooleys-bowl").get({source:"server"}).then(function(doc) {
+                console.log(doc.data());
+                
+                var points = doc.data().alabama;
+            });
+            **/
+        </script>
+    </body>
+</html>
