@@ -37,7 +37,7 @@ $(document).ready(function(){
         var url = database.collection("webhooks").doc("slack").get({source:"server"}).then(function(doc) {
             var slackUrl = doc.data().url;
             $.ajax({
-                data: "pauload=" + JSON.stringify({
+                data: "payload=" + JSON.stringify({
                     "text":"Hello world!"
                 }),
                 dataType: "json",
