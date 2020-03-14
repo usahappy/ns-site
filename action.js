@@ -1,3 +1,20 @@
+function playVideo(videoObj) {
+    videoObj.css("display","block");
+    videoObj[0].play();
+
+    videoObj.stop().hide(0).fadeIn(500);
+
+    var videoDuration = videoObj[0].duration;
+    var fadeDelay = (videoDuration * 1000) - 500
+
+    setTimeout(function(){
+        videoObj.stop().fadeOut(500, function() {
+            videoObj[0].pause();
+            videoObj[0].currentTime = 0;
+        });
+    }, fadeDelay);
+}
+
 $(document).ready(function(){
     /* SCROLLING */
     var currentPos = 1;
@@ -86,26 +103,36 @@ $(document).ready(function(){
     $(".navbar li").each(function(){
         $(this).mouseenter(function(){
             if ($(this).is("#BLIS")) {
-                $("body").css("background","#00A0C1");
+                $(".overlay-color").css("background","#00A0C1ff");
                 
             } else if ($(this).is("#RHA")) {
-                $("body").css("background","#EE274E");
+                $(".overlay-color").css("background","#EE274Eff");
                 
             } else if ($(this).is("#hall-council")) {
-                $("body").css("background","#004382");
+                $(".overlay-color").css("background","#004382ff");
                 
             } else if ($(this).is("#VFX")) {
-                $("body").css("background","#4c1073");
+                $(".overlay-color").css("background","#460770ff");
+            
+            } else if ($(this).is("#misc")) {
+                $(".overlay-color").css("background","#4913cdff");
                 
             } else if ($(this).is("#web")) {
-                $("body").css("background","#e44d26");
+                $(".overlay-color").css("background","#e44d26ff");
                 
             } else if ($(this).is("#roblox")) {
-                $("body").css("background","#eb1a24");
+                $(".overlay-color").css("background","#eb1a24d9");
+                playVideo($("video",this));
             }
         });
-        $(this).mouseleave(function(){
-            $("body").css("background","black");
+        $(this).on("mouseleave", function(){
+            $(".overlay-color").css("background","#000000ff");
+
+            var videoToStop = $(this).parent().find("video");
+            videoToStop.stop().fadeOut(500, function() {
+                videoToStop[0].pause();
+                videoToStop[0].currentTime = 0;
+            });
         });
     });
 });

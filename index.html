@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Nicholas Skelley – Home</title>
+        <title>Nicholas Skelley | Home</title>
         <link rel="stylesheet" href="https://use.typekit.net/pvn8mzu.css">
         <link rel="stylesheet" href="main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -10,6 +10,10 @@
         <meta name="author" content="Nicholas Skelley">
         <meta name="keywords" content="nicholas skelley,html,css,javascript,jquery,after effects,vfx,motion graphics,graphic design,branding,brand,skelley,nicholas,richard,graphic designer,designer,graphics,artist,creative,portfolio,resume,developer,ios,web,roblox,emory,emory university">
         <meta name="description" content="">
+        
+        <link rel="icon" href="images/icon-black.png" media="(prefers-color-scheme: light)">
+        <link rel="icon" href="images/icon-black.png" media="(prefers-color-scheme: no-preference)">
+        <link rel="icon" href="images/icon-white.png" media="(prefers-color-scheme: dark)">
     </head>
     <body>
         <div class="content-container" id="num1">
@@ -23,17 +27,34 @@
         </div>
         
         <div class="navbar">
+            <i class="overlay-color"></i>
+            
             <ul id="nav-num1"></ul>
             <ul id="nav-num2">
                 <li id="web"><a href="https://www.nicholasskelley.com/develop/sites">web</a></li>
-                <li id="roblox"><a href="https://roblox.nicholasskelley.com">roblox</a></li>
+                <li id="roblox">
+                    <a href="https://roblox.nicholasskelley.com">roblox</a>
+                    <video preload="auto" title="roblox projects" muted>
+                        <source type="video/mp4" src="demo-videos/roblox3.mp4">
+                    </video>
+                </li>
             </ul>
             <ul id="nav-num3">
-                <li id="BLIS"><a href="https://www.nicholasskelley.com/design/blis">blis</a></li>
                 <li id="RHA"><a href="https://rha.nicholasskelley.com/enter">rha</a></li>
                 <li id="hall-council"><a href="https://www.nicholasskelley.com/design/hall-council">hall council</a></li>
+                <li id="BLIS"><a href="https://www.nicholasskelley.com/design/blis">blis</a></li>
                 <li id="VFX"><a href="https://www.nicholasskelley.com/design/vfx">vfx</a></li>
+                <li id="misc"><a href="https://www.nicholasskelley.com/design/misc">misc</a></li>
             </ul>
         </div>
+        
+        
+        <!--
+        <div class="demo-videos">
+            <video id="roblox-video" preload="auto" title="roblox projects" muted>
+                <source type="video/mp4" src="demo-videos/roblox.mp4">
+            </video>
+        </div>
+        -->
     </body>
 </html>
