@@ -19,6 +19,13 @@ h1 {
     background: none;
 }
 
+.backup-header {
+    position: absolute;
+    top: 30vh;
+    right: 75px;
+    width: 100%;
+}
+
 .content-container {
     background: none;
     position: absolute;
@@ -110,6 +117,80 @@ h1 {
     top: 0;
     display: none;
     transform: translate(-50%, 0);
+}
+
+#RHA-icon {
+    position: fixed;
+    fill: white;
+    stroke: white;
+    stroke-width: 5px;
+    stroke-dasharray: 0;
+    z-index: -1;
+    right: 75px;
+    width: 50%;
+    max-height: 75vh;
+    overflow: visible;
+    top: 250px;
+    display: none;
+    stroke-linecap: round;
+}
+
+#RHA a:hover ~ #RHA-icon {
+    display: block;
+    animation: animateRHA 3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes animateRHA {
+    0% {
+        fill: none;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+    }
+    40% {
+        fill: #ffffff00;
+    }
+    80% {
+        fill: #ffffffff;
+    }
+    100% {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 0;
+    }
+}
+
+#BLIS-icon {
+    position: fixed;
+    fill: #121212;
+    stroke: #121212;
+    stroke-width: 5px;
+    stroke-dasharray: 2500;
+    z-index: -1;
+    right: 75px;
+    width: 50%;
+    max-height: 75vh;
+    overflow: visible;
+    top: 100px;
+    display: none;
+    stroke-linecap: round;
+}
+
+#BLIS a:hover ~ #BLIS-icon {
+    display: block;
+    animation: animateBLIS 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes animateBLIS {
+    0% {
+        fill: none;
+        stroke-dashoffset: 2500;
+    }
+    60% {
+        fill: #12121200;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #121212ff;
+    }
 }
 
 /*

@@ -15,7 +15,14 @@ function playVideo(videoObj) {
     }, fadeDelay);
 }
 
+function setBackupText(title) {
+    $(".backup-header").text(title);
+    $(".backup-header").delay(150).stop().fadeIn(500);
+}
+
 $(document).ready(function(){
+    $(".backup-header").fadeOut(0);
+    
     /* SCROLLING */
     var currentPos = 1;
     var wait = false;
@@ -100,34 +107,50 @@ $(document).ready(function(){
     });
     
     /* HOVER PREVIEW */
-    $(".navbar li").each(function(){
+    $(".navbar li a").each(function(){
         $(this).mouseenter(function(){
-            if ($(this).is("#BLIS")) {
+            $("#num"+currentPos+" h1").stop().fadeOut(200);
+            if ($(this).parent().is("#BLIS")) {
                 $(".overlay-color").css("background","#00A0C1ff");
                 
-            } else if ($(this).is("#RHA")) {
+            } else if ($(this).parent().is("#RHA")) {
                 $(".overlay-color").css("background","#EE274Eff");
                 
-            } else if ($(this).is("#hall-council")) {
+            } else if ($(this).parent().is("#hall-council")) {
                 $(".overlay-color").css("background","#004382ff");
                 
-            } else if ($(this).is("#VFX")) {
+                $(".backup-header").text("HALL COUNCIL");
+                $(".backup-header").delay(150).stop().fadeIn(500);
+                
+            } else if ($(this).parent().is("#VFX")) {
                 $(".overlay-color").css("background","#460770ff");
             
-            } else if ($(this).is("#misc")) {
+            } else if ($(this).parent().is("#misc")) {
                 $(".overlay-color").css("background","#4913cdff");
                 
-            } else if ($(this).is("#web")) {
+                $(".backup-header").text("MICELLANEOUS");
+                $(".backup-header").delay(150).stop().fadeIn(500);
+                
+            } else if ($(this).parent().is("#web")) {
                 $(".overlay-color").css("background","#e44d26ff");
                 
-            } else if ($(this).is("#roblox")) {
+                $(".backup-header").text("WEB DEVELOPMENT");
+                $(".backup-header").delay(150).stop().fadeIn(500);
+                
+            } else if ($(this).parent().is("#roblox")) {
                 $(".overlay-color").css("background","#eb1a24d9");
-                playVideo($("video",this));
+                
+                $(".backup-header").text("ROBLOX");
+                $(".backup-header").delay(500).stop().fadeIn(500);
+                
+                playVideo($(this).parent().find("video"));
             }
         });
         $(this).on("mouseleave", function(){
             $(".overlay-color").css("background","#000000ff");
-
+            $("#num"+currentPos+" h1").delay(200).stop().fadeIn(500);
+            $(".backup-header").stop().fadeOut(200);
+            
             var videoToStop = $(this).parent().find("video");
             videoToStop.stop().fadeOut(500, function() {
                 videoToStop[0].pause();
