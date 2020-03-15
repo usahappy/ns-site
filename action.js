@@ -158,4 +158,16 @@ $(document).ready(function(){
             });
         });
     });
+    
+    // favicon
+    window.matchMedia("(prefers-color-scheme:dark)").addListener(function(e) {
+       console.log(e.matches);
+        if (e.matches) {
+            var newIcon = '<link rel="icon" href="https://www.nicholasskelley.com/images/icon-white.png">';
+            $("head").append(newIcon);
+        } else if (! e.matches) {
+            var newIcon = '<link rel="icon" href="https://www.nicholasskelley.com/images/icon-black.png">';
+            $("head").append(newIcon);
+        }
+    });
 });
