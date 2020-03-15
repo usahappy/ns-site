@@ -160,6 +160,10 @@ $(document).ready(function(){
     });
     
     // favicon
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+        var newIcon = '<link rel="icon" href="https://www.nicholasskelley.com/images/icon-white.png">';
+        $("head").append(newIcon);
+    }
     window.matchMedia("(prefers-color-scheme:dark)").addListener(function(e) {
        console.log(e.matches);
         if (e.matches) {
