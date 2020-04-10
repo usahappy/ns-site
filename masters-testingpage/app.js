@@ -69,5 +69,5 @@ $(document).ready(function(){
     }
     updateLeaderboard();
     //reload every minute
-    //setInterval(function(){window.location.href=window.location.href;},10000);
+    setInterval(function(){window.location.href=window.location.href;},10000);
 });

@@ -30,6 +30,11 @@ h1 {
     padding: 0 20px;
 }
 
+.content-container p {
+    font-size: 14pt;
+    line-height: 1.5;
+}
+
 .leaderboard-container {
     margin-top: 50px;
     padding: 0 20px;
@@ -53,6 +58,15 @@ h1 {
     margin-bottom: -30px;
     text-align: center;
     font-style: italic;
+}
+
+.leaderboard .leaderboard-header p:nth-child(1) {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.leaderboard .leaderboard-header p:nth-child(2) {
+    text-align: left;
 }
 
 .leaderboard .leaderslot {
@@ -79,7 +93,7 @@ h1 {
 }
 
 .leaderboard .leaderslot p#place {
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 @media screen and (max-width: 720px) {
