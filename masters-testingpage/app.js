@@ -70,4 +70,9 @@ $(document).ready(function(){
     updateLeaderboard();
     //reload every minute
     setInterval(function(){window.location.href=window.location.href;},10000);
+    
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+        var newIcon = '<link rel="icon" href="https://www.nicholasskelley.com/images/icon-white.png">';
+        $("head").append(newIcon);
+    }
 });
