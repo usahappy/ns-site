@@ -1,0 +1,89 @@
+body {
+    --green: #4dc200;
+    --charcoal: #262626;
+    
+    margin: 0;
+    font-family: benton-sans, sans-serif;
+    color: var(--charcoal);
+    line-height: 1;
+    min-width: 620px;
+}
+
+h2 {
+    font-family: benton-sans-condensed, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 28pt;
+    margin: 0;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 36pt;
+    line-height: 1.15;
+    font-weight: 600;
+    margin: 0;
+}
+
+.content-container {
+    padding: 0 20px;
+}
+
+.leaderboard-container {
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.leaderboard {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 5px;
+}
+
+.leaderboard div {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 2fr 1.5fr 1.5fr;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.leaderboard .leaderboard-header {
+    margin: -20px 0;
+    margin-bottom: -30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.leaderboard .leaderslot {
+    background: var(--charcoal);
+    font-weight: 500;
+    color: white;
+    
+    transition: transform 0.2s, background 0.1s;
+}
+
+.leaderboard .leaderslot:hover {
+    transform: scale(1.01,1);
+    background: var(--green);
+}
+
+.leaderboard .leaderslot p {
+    position: relative;
+    margin: 0;
+    font-size: 16pt;
+}
+
+.leaderboard .leaderslot p#liveScore,p#todayScore,p#golfer {
+    text-align: center;
+}
+
+.leaderboard .leaderslot p#place {
+    padding-left: 50px;
+}
+
+@media screen and (max-width: 720px) {
+    .leaderboard .leaderslot p {
+        font-size: 14pt !important;
+    }
+}
