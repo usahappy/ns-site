@@ -1,0 +1,56 @@
+{
+    "player":
+    [{
+        "name":"John Conroy",
+        "golfer":"DeChambeau",
+        "startScore":"210",
+        "liveScore":"0"
+    },{
+        "name":"Tim Maguire",
+        "golfer":"Bradley",
+        "startScore":"205",
+        "liveScore":"0"
+    },{
+        "name":"Rick Hunter",
+        "golfer":"Cabrera Bello",
+        "startScore":"208",
+        "liveScore":"0"
+    },{
+        "name":"Walter Hanley",
+        "golfer":"Fowler",
+        "startScore":"209",
+        "liveScore":"0"
+    },{
+        "name":"Scott Borden",
+        "golfer":"Rahm",
+        "startScore":"208",
+        "liveScore":"0"
+    },{
+        "name":"Tim Pidgeon",
+        "golfer":"Spieth",
+        "startScore":"208",
+        "liveScore":"0"
+    },{
+        "name":"Pat Foster",
+        "golfer":"Schauffele",
+        "startScore":"207",
+        "liveScore":"0"
+    },{
+        "name":"Corby Alfred",
+        "golfer":"Kuchar",
+        "startScore":"210",
+        "liveScore":"0"
+    },{
+        "name":"Jeff Foster",
+        "golfer":"Wise",
+        "startScore":"209",
+        "liveScore":"0"
+    },
+     {
+        "name":"Stephen Foster",
+        "golfer":"Olesen",
+        "startScore":"210",
+        "liveScore":"0"
+    }    
+    ]
+}
