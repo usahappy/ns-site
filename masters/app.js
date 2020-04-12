@@ -1,10 +1,10 @@
 $(document).ready(function(){
     function updateLeaderboard() {
-        $.getJSON("https://www.nicholasskelley.com/masters/livescore.json", function(data){
+        var curTimeStamp = Math.floor(Date.now()/1000);
+        $.getJSON("https://www.nicholasskelley.com/masters/livescore.json?t="+curTimeStamp, function(data){
             $(".leaderboard .leaderslot").each(function(){
                 $(this).remove();
             });
-            
             console.log("updating leaderboard");
              var listing = data.player.sort(function(a,b){ return (parseInt(a.startScore)+parseInt(a.liveScore)) - (parseInt(b.startScore)+parseInt(b.liveScore));});
 
@@ -46,15 +46,15 @@ $(document).ready(function(){
                  // assign the correct place
                  var curr = parseInt(val.liveScore)+parseInt(val.startScore);
                  var thisPlace = "";
+                 var extraClass = "";
+                 var currentSum = 1;
                  for (i=0; i < placeCutoffs.length; i++){
                      if (curr == placeCutoffs[i] && placeFrequencies[i]==1) {
-                         var currentSum = 1;
                          for (q=(i-1); q>=0; q--) {
                              currentSum+=placeFrequencies[q];
                         }
                         thisPlace = thisPlace + currentSum;
                      } else if (curr == placeCutoffs[i] && placeFrequencies[i] > 1) {
-                         var currentSum = 1;
                          for (q=(i-1); q>=0; q--) {
                              currentSum+=placeFrequencies[q];
                         }
@@ -62,12 +62,29 @@ $(document).ready(function(){
                      }
                  }
 
-                 var toAppend = "<div class='leaderslot'><p id='place'>"+thisPlace+"</p><p id='name'>"+val.name+"</p><p id='golfer'>"+val.golfer+"</p><p id='liveScore'>"+(parseInt(val.startScore)+parseInt(val.liveScore))+"</p><p id='todayScore'>"+val.liveScore+"</p></div>";
+                 switch(currentSum) {
+                     case 1:
+                         extraClass=" firstplace";
+                         break;
+                     case 2:
+                         extraClass=" secondplace";
+                         break;
+                     case 3:
+                         extraClass=" thirdplace";
+                         break;
+                     default:
+                         break;
+                 }
+                 
+                 var toAppend = "<div class='leaderslot" + extraClass + "'><p id='place'>"+thisPlace+"</p><p id='name'>"+val.name+"</p><p id='golfer'>"+val.golfer+"</p><p id='liveScore'>"+(parseInt(val.startScore)+parseInt(val.liveScore))+"</p><p id='todayScore'>"+val.liveScore+"</p></div>";
                  $(".leaderboard").append(toAppend);
              });
         });
     }
     updateLeaderboard();
+    
+    setInterval(function(){updateLeaderboard();},10000);
+    
     
     if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
         var newIcon = '<link rel="icon" href="https://www.nicholasskelley.com/images/icon-white.png">';
