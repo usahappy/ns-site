@@ -1,10 +1,9 @@
 $(document).ready(function(){
     function updateLeaderboard() {
+        $(".leaderboard .leaderslot").each(function(){
+            $(this).remove();
+        });
         $.getJSON("https://www.nicholasskelley.com/masters/livescore.json", function(data){
-            $(".leaderboard .leaderslot").each(function(){
-                $(this).remove();
-            });
-            
             console.log("updating leaderboard");
              var listing = data.player.sort(function(a,b){ return (parseInt(a.startScore)+parseInt(a.liveScore)) - (parseInt(b.startScore)+parseInt(b.liveScore));});
 
@@ -68,8 +67,9 @@ $(document).ready(function(){
         });
     }
     updateLeaderboard();
-    //reload every minute
+    
     setInterval(function(){updateLeaderboard();},10000);
+    
     
     if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
         var newIcon = '<link rel="icon" href="https://www.nicholasskelley.com/images/icon-white.png">';
