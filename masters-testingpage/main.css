@@ -2,6 +2,15 @@ body {
     --green: #4dc200;
     --charcoal: #262626;
     
+    --gold: #f0af0c;
+    --darkgold: #e8a200;
+    
+    --silver: #c4c4c4;
+    --darksilver: #b8b8b8;
+    
+    --bronze: #c9582e;
+    --darkbronze: #ba4b22;
+    
     margin: 0;
     font-family: benton-sans, sans-serif;
     color: var(--charcoal);
@@ -96,6 +105,27 @@ h1 {
 
 .leaderboard .leaderslot p#place {
     padding-left: 20px;
+}
+
+.leaderslot.firstplace {
+    background: var(--gold);
+}
+.leaderslot.firstplace:hover {
+    background: var(--darkgold);
+}
+
+.leaderslot.secondplace {
+    background: var(--silver);
+}
+.leaderslot.secondplace:hover {
+    background: var(--darksilver);
+}
+
+.leaderslot.thirdplace {
+    background: var(--bronze);
+}
+.leaderslot.thirdplace:hover {
+    background: var(--darkbronze);
 }
 
 @media screen and (max-width: 720px) {
