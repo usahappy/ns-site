@@ -1,9 +1,10 @@
 $(document).ready(function(){
     function updateLeaderboard() {
-        $(".leaderboard .leaderslot").each(function(){
-            $(this).remove();
-        });
-        $.getJSON("https://www.nicholasskelley.com/masters/livescore.json", function(data){
+        var curTimeStamp = Math.floor(Date.now()/1000);
+        $.getJSON("https://www.nicholasskelley.com/masters/livescore.json?t="+curTimeStamp, function(data){
+            $(".leaderboard .leaderslot").each(function(){
+                $(this).remove();
+            });
             console.log("updating leaderboard");
              var listing = data.player.sort(function(a,b){ return (parseInt(a.startScore)+parseInt(a.liveScore)) - (parseInt(b.startScore)+parseInt(b.liveScore));});
 
