@@ -34,7 +34,7 @@
         "name":"Pat Foster",
         "golfer":"Schauffele",
         "startScore":"207",
-        "liveScore":"33"
+        "liveScore":"45"
     },{
         "name":"Corby Alfred",
         "golfer":"Kuchar",
@@ -59,7 +59,7 @@
         "name":"Jerry Manning",
         "golfer":"Day",
         "startScore":"210",
-        "liveScore":"34"
+        "liveScore":"45"
     },{
         "name":"Zach Oates",
         "golfer":"Scott",
@@ -94,7 +94,7 @@
         "name":"Tim Weeden",
         "golfer":"B. Koepka",
         "startScore":"210",
-        "liveScore":"35"
+        "liveScore":"48"
     },{
         "name":"Rick Skelley",
         "golfer":"Poulter",
@@ -119,8 +119,7 @@
         "name":"Chris Butcher",
         "golfer":"Walker",
         "startScore":"217",
-        "liveScore":"37"
-    },{
+        "liveScore":"48"    },{
         "name":"Jimmy Collins",
         "golfer":"McIlroy",
         "startScore":"213",
@@ -134,7 +133,7 @@
         "name":"Tim Kitteridge",
         "golfer":"Li",
         "startScore":"217",
-        "liveScore":"37"
+        "liveScore":"48"
     },{
         "name":"Will Daniel",
         "golfer":"Tway",
@@ -144,7 +143,7 @@
         "name":"Paul Daniel",
         "golfer":"D. Johnson",
         "startScore":"221",
-        "liveScore":"36"
+        "liveScore":"47"
     },{
         "name":"Rick Clark",
         "golfer":"Kisner",
