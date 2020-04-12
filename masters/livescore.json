@@ -4,197 +4,197 @@
         "name":"John Conroy",
         "golfer":"DeChambeau",
         "startScore":"210",
-        "liveScore":"4"
+        "liveScore":"22"
     },{
         "name":"Tim Maguire",
         "golfer":"Bradley",
         "startScore":"205",
-        "liveScore":"5"
+        "liveScore":"25"
     },{
         "name":"Rick Hunter",
         "golfer":"Cabrera Bello",
         "startScore":"208",
-        "liveScore":"4"
+        "liveScore":"22"
     },{
         "name":"Walter Hanley",
         "golfer":"Fowler",
         "startScore":"209",
-        "liveScore":"3"
+        "liveScore":"22"
     },{
         "name":"Scott Borden",
         "golfer":"Rahm",
         "startScore":"208",
-        "liveScore":"4"
+        "liveScore":"24"
     },{
         "name":"Tim Pidgeon",
         "golfer":"Spieth",
         "startScore":"208",
-        "liveScore":"3"
+        "liveScore":"21"
     },{
         "name":"Pat Foster",
         "golfer":"Schauffele",
         "startScore":"207",
-        "liveScore":"3"
+        "liveScore":"23"
     },{
         "name":"Corby Alfred",
         "golfer":"Kuchar",
         "startScore":"210",
-        "liveScore":"4"
+        "liveScore":"24"
     },{
         "name":"Jeff Foster",
         "golfer":"Wise",
         "startScore":"209",
-        "liveScore":"4"
+        "liveScore":"22"
     },{
         "name":"Stephen Foster",
         "golfer":"Olesen",
         "startScore":"210",
-        "liveScore":"5"
+        "liveScore":"23"
     },{
         "name":"Steve Rasmussen",
         "golfer":"Ortiz",
         "startScore":"209",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Jerry Manning",
         "golfer":"Day",
         "startScore":"210",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Zach Oates",
         "golfer":"Scott",
         "startScore":"205",
-        "liveScore":"4"
+        "liveScore":"25"
     },{
         "name":"Jason Stover",
         "golfer":"B. Watson",
         "startScore":"210",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Stephen McLaughlin",
         "golfer":"Mitchell",
         "startScore":"209",
-        "liveScore":"3"
+        "liveScore":"22"
     },{
         "name":"Rowdy Davis",
         "golfer":"Hovland",
         "startScore":"209",
-        "liveScore":"3"
+        "liveScore":"23"
     },{
         "name":"Rodney Hancock",
         "golfer":"Bjerregaad",
         "startScore":"207",
-        "liveScore":"5"
+        "liveScore":"25"
     },{
         "name":"Bradd Cupples",
         "golfer":"S.W. Kim",
         "startScore":"209",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Tim Weeden",
         "golfer":"B. Koepka",
         "startScore":"210",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Rick Skelley",
         "golfer":"Poulter",
         "startScore":"211",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Michael Butcher",
         "golfer":"Fitzpatrick",
         "startScore":"218",
-        "liveScore":"4"
+        "liveScore":"22"
     },{
         "name":"Tom Tighe",
         "golfer":"Cantllay",
         "startScore":"217",
-        "liveScore":"3"
+        "liveScore":"21"
     },{
         "name":"Bob Skelley",
         "golfer":"Stenson",
         "startScore":"215",
-        "liveScore":"4"
+        "liveScore":"25"
     },{
         "name":"Chris Butcher",
         "golfer":"Walker",
         "startScore":"217",
-        "liveScore":"3"
+        "liveScore":"24"
     },{
         "name":"Jimmy Collins",
         "golfer":"McIlroy",
         "startScore":"213",
-        "liveScore":"3"
+        "liveScore":"23"
     },{
         "name":"Scott McGahey",
         "golfer":"Finau",
         "startScore":"212",
-        "liveScore":"4"
+        "liveScore":"24"
     },{
         "name":"Tim Kitteridge",
         "golfer":"Li",
         "startScore":"217",
-        "liveScore":"4"
+        "liveScore":"25"
     },{
         "name":"Will Daniel",
         "golfer":"Tway",
         "startScore":"213",
-        "liveScore":"5"
+        "liveScore":"25"
     },{
         "name":"Paul Daniel",
         "golfer":"D. Johnson",
         "startScore":"221",
-        "liveScore":"4"
+        "liveScore":"24"
     },{
         "name":"Rick Clark",
         "golfer":"Kisner",
         "startScore":"214",
-        "liveScore":"4"
+        "liveScore":"22"
     },{
         "name":"Jackson Skelley",
         "golfer":"Stanley",
         "startScore":"213",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Adam Ruder",
         "golfer":"Molanari",
         "startScore":"213",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Steve Cain",
         "golfer":"Simpson",
         "startScore":"216",
-        "liveScore":"4"
+        "liveScore":"24"
     },{
         "name":"Kim Bucher",
         "golfer":"Woods",
         "startScore":"217",
-        "liveScore":"4"
+        "liveScore":"24"
     },{
         "name":"Paul McNamara",
         "golfer":"Howell",
         "startScore":"211",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Tyler Dulmage",
         "golfer":"Woodland",
         "startScore":"212",
-        "liveScore":"4"
+        "liveScore":"23"
     },{
         "name":"Mike McDermott",
         "golfer":"Reed",
         "startScore":"213",
-        "liveScore":"4"
+        "liveScore":"24"
     },{
         "name":"Ryan Skelley",
         "golfer":"Harding",
         "startScore":"211",
-        "liveScore":"3"
+        "liveScore":"23"
     },{
         "name":"Tyler Crace",
         "golfer":"Matsuyama",
         "startScore":"211",
-        "liveScore":"4"
+        "liveScore":"23"
     }
     ]
 }
