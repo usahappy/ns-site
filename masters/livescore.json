@@ -94,7 +94,7 @@
         "name":"Tim Weeden",
         "golfer":"B. Koepka",
         "startScore":"210",
-        "liveScore":"23"
+        "liveScore":"35"
     },{
         "name":"Rick Skelley",
         "golfer":"Poulter",
@@ -139,7 +139,7 @@
         "name":"Will Daniel",
         "golfer":"Tway",
         "startScore":"213",
-        "liveScore":"25"
+        "liveScore":"37"
     },{
         "name":"Paul Daniel",
         "golfer":"D. Johnson",
@@ -149,17 +149,17 @@
         "name":"Rick Clark",
         "golfer":"Kisner",
         "startScore":"214",
-        "liveScore":"22"
+        "liveScore":"37"
     },{
         "name":"Jackson Skelley",
         "golfer":"Stanley",
         "startScore":"213",
-        "liveScore":"23"
+        "liveScore":"35"
     },{
         "name":"Adam Ruder",
         "golfer":"Molanari",
         "startScore":"213",
-        "liveScore":"23"
+        "liveScore":"36"
     },{
         "name":"Steve Cain",
         "golfer":"Simpson",
@@ -169,7 +169,7 @@
         "name":"Kim Bucher",
         "golfer":"Woods",
         "startScore":"217",
-        "liveScore":"24"
+        "liveScore":"35"
     },{
         "name":"Paul McNamara",
         "golfer":"Howell",
@@ -179,12 +179,12 @@
         "name":"Tyler Dulmage",
         "golfer":"Woodland",
         "startScore":"212",
-        "liveScore":"23"
+        "liveScore":"37"
     },{
         "name":"Mike McDermott",
         "golfer":"Reed",
         "startScore":"213",
-        "liveScore":"24"
+        "liveScore":"36"
     },{
         "name":"Ryan Skelley",
         "golfer":"Harding",
@@ -194,7 +194,7 @@
         "name":"Tyler Crace",
         "golfer":"Matsuyama",
         "startScore":"211",
-        "liveScore":"23"
+        "liveScore":"35"
     }
     ]
 }
