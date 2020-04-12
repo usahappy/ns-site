@@ -44,12 +44,12 @@
         "name":"Jeff Foster",
         "golfer":"Wise",
         "startScore":"209",
-        "liveScore":"22"
+        "liveScore":"33"
     },{
         "name":"Stephen Foster",
         "golfer":"Olesen",
         "startScore":"210",
-        "liveScore":"23"
+        "liveScore":"35"
     },{
         "name":"Steve Rasmussen",
         "golfer":"Ortiz",
@@ -69,7 +69,7 @@
         "name":"Jason Stover",
         "golfer":"B. Watson",
         "startScore":"210",
-        "liveScore":"23"
+        "liveScore":"35"
     },{
         "name":"Stephen McLaughlin",
         "golfer":"Mitchell",
@@ -79,12 +79,12 @@
         "name":"Rowdy Davis",
         "golfer":"Hovland",
         "startScore":"209",
-        "liveScore":"23"
+        "liveScore":"36"
     },{
         "name":"Rodney Hancock",
         "golfer":"Bjerregaad",
         "startScore":"207",
-        "liveScore":"25"
+        "liveScore":"36"
     },{
         "name":"Bradd Cupples",
         "golfer":"S.W. Kim",
@@ -109,17 +109,17 @@
         "name":"Tom Tighe",
         "golfer":"Cantllay",
         "startScore":"217",
-        "liveScore":"21"
+        "liveScore":"33"
     },{
         "name":"Bob Skelley",
         "golfer":"Stenson",
         "startScore":"215",
-        "liveScore":"25"
+        "liveScore":"37"
     },{
         "name":"Chris Butcher",
         "golfer":"Walker",
         "startScore":"217",
-        "liveScore":"24"
+        "liveScore":"37"
     },{
         "name":"Jimmy Collins",
         "golfer":"McIlroy",
@@ -134,7 +134,7 @@
         "name":"Tim Kitteridge",
         "golfer":"Li",
         "startScore":"217",
-        "liveScore":"25"
+        "liveScore":"37"
     },{
         "name":"Will Daniel",
         "golfer":"Tway",
