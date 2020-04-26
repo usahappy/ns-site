@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'ObelixPro-BoldItalic';
+  font-family: 'ObelixPro-Bold';
   src: url('obelix/obelixprobit-cyr.eot');
   src: url('obelix/obelixprobit-cyr.eot?#iefix') format('embedded-opentype'),
        url('obelix/obelixprobit-cyr.woff') format('woff'),
@@ -10,7 +10,7 @@
 * {
     --border-width: 10px;
     --margin-width: -5px;
-    font-family: ObelixPro-BoldItalic, "Comic Sans MS", sans-serif;
+    font-family: ObelixPro-Bold, "Comic Sans MS", sans-serif;
 }
 
 .maze.container {
@@ -134,4 +134,49 @@
     font-size: 28pt;
     letter-spacing: 2px;
     color: white;
+}
+
+p.instructions{
+    position: relative;
+    top: 40px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.mobile-controller {
+    position: relative;
+    top: 60px;
+    margin: 0 auto;
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.mobile-controller div:not(.empty) {
+    border-radius: 10%;
+    text-align: center;
+    position: relative;
+    margin: 2px;
+    background: #df1e2f;
+    display: block;
+    
+    transition: background 0.1s;
+}
+
+.mobile-controller div.activated {
+    background: #b21826;
+}
+
+.mobile-controller a {
+    font-family: sans-serif;
+    font-size: 42pt;
+    color: white;
+    text-decoration: none;
+    font-style: normal!important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

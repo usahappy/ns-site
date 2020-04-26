@@ -81,6 +81,61 @@ $(document).ready(function(){
     $(".maze.player").moveTo($(".maze .start"));
     $(".maze .start").addClass("current-position");
     
+    $(".mobile-controller a").each(function(){
+        $(this).on("click",function(){
+            if ($(this).is("#left-button")) {
+                if (!($(".current-position").is(".border-left") || $(".current-position").is(".edge-left"))) {
+                    currentColumn -= 1;
+
+                    $(".current-position").removeClass("current-position");
+                    var newSquare = $(".maze #a" + currentRow + "" + currentColumn);
+                    newSquare.addClass("current-position");
+                    $(".maze.player").moveTo(newSquare);
+                }
+            } else if ($(this).is("#right-button")) {
+                if (!($(".current-position").is(".border-right") || $(".current-position").is(".edge-right"))) {
+                    currentColumn += 1;
+
+                    $(".current-position").removeClass("current-position");
+                    var newSquare = $(".maze #a" + currentRow + "" + currentColumn);
+                    newSquare.addClass("current-position");
+                    $(".maze.player").moveTo(newSquare);
+                }
+            } else if ($(this).is("#up-button")) {
+                if (!($(".current-position").is(".border-top") || $(".current-position").is(".edge-top"))) {
+                    currentRow -= 1;
+
+                    $(".current-position").removeClass("current-position");
+                    var newSquare = $(".maze #a" + currentRow + "" + currentColumn);
+                    newSquare.addClass("current-position");
+                    $(".maze.player").moveTo(newSquare);
+                }
+            } else if ($(this).is("#down-button")) {
+                if (!($(".current-position").is(".border-bottom") || $(".current-position").is(".edge-bottom"))) {
+                    currentRow += 1;
+
+                    $(".current-position").removeClass("current-position");
+                    var newSquare = $(".maze #a" + currentRow + "" + currentColumn);
+                    newSquare.addClass("current-position");
+                    $(".maze.player").moveTo(newSquare);
+                }
+            }
+            
+            if (currentColumn==10 && currentRow==10) {
+                inMaze=false;
+                setTimeout(function(){$(".winner").addClass("finished");}, 250);
+            }
+        });
+        
+        $(this).mousedown(function(){
+            $(this).parent().addClass("activated");
+        });
+        
+        $(this).mouseup(function(){
+            $(this).parent().removeClass("activated");
+        });
+    });
+    
     $(document).keydown(function(e){
         if (inMaze) {
             switch(e.which){
