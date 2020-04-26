@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="maze.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="app.js" type="application/javascript"></script>
+    </head>
+    <body>
+        <span class="maze player"></span>
+        <div class="maze container">
+            <span id="a11" class="start edge-top edge-left"></span>
+            <span id="a12" class="edge-top border-bottom"></span>
+            <span id="a13" class="edge-top border-bottom"></span>
+            <span id="a14" class="edge-top border-bottom"></span>
+            <span id="a15" class="edge-top border-bottom"></span>
+            <span id="a16" class="edge-top border-bottom"></span>
+            <span id="a17" class="edge-top border-bottom"></span>
+            <span id="a18" class="edge-top border-bottom"></span>
+            <span id="a19" class="edge-top border-right"></span>
+            <span id="a110" class="edge-top edge-right"></span>
+            
+            <span id="a21" class="edge-left border-right"></span>
+            <span id="a22" class="border-left border-top"></span>
+            <span id="a23" class="border-top border-bottom"></span>
+            <span id="a24" class="border-top border-bottom"></span>
+            <span id="a25" class="border-top border-right"></span>
+            <span id="a26" class="border-top border-left"></span>
+            <span id="a27" class="border-top border-bottom"></span>
+            <span id="a28" class="border-top border-bottom"></span>
+            <span id="a29" class="border-right border-bottom"></span>
+            <span id="a210" class="border-left edge-right"></span>
+            
+            <span id="a31" class="edge-left border-right"></span>
+            <span id="a32" class="border-left"></span>
+            <span id="a33" class="border-top border-bottom"></span>
+            <span id="a34" class="border-top border-right"></span>
+            <span id="a35" class="border-left border-right"></span>
+            <span id="a36" class="border-left border-bottom"></span>
+            <span id="a37" class="border-top border-bottom"></span>
+            <span id="a38" class="border-top border-bottom"></span>
+            <span id="a39" class="border-top border-bottom"></span>
+            <span id="a310" class="edge-right"></span>
+            
+            <span id="a41" class="edge-left border-bottom"></span>
+            <span id="a42" class="border-right border-bottom"></span>
+            <span id="a43" class="border-left border-top"></span>
+            <span id="a44" class="border-bottom border-right"></span>
+            <span id="a45" class="border-left border-bottom"></span>
+            <span id="a46" class="border-right border-top"></span>
+            <span id="a47" class="border-top border-left"></span>
+            <span id="a48" class="border-top border-right"></span>
+            <span id="a49" class="border-left border-top"></span>
+            <span id="a410" class="edge-right border-bottom"></span>
+            
+            <span id="a51" class="edge-left border-top"></span>
+            <span id="a52" class="border-top border-right border-bottom"></span>
+            <span id="a53" class="border-left border-bottom"></span>
+            <span id="a54" class="border-top border-bottom"></span>
+            <span id="a55" class="border-top border-right border-bottom"></span>
+            <span id="a56" class="border-left border-bottom"></span>
+            <span id="a57" class="border-right border-bottom"></span>
+            <span id="a58" class="border-left border-right"></span>
+            <span id="a59" class="border-left border-right"></span>
+            <span id="a510" class="border-top border-left edge-right"></span>
+            
+            <span id="a61" class="edge-left border-bottom"></span>
+            <span id="a62" class="border-bottom border-top"></span>
+            <span id="a63" class="border-top border-right"></span>
+            <span id="a64" class="border-left border-top"></span>
+            <span id="a65" class="border-top border-right"></span>
+            <span id="a66" class="border-top border-left border-right"></span>
+            <span id="a67" class="border-left border-top"></span>
+            <span id="a68" class="border-right border-bottom"></span>
+            <span id="a69" class="border-left border-bottom"></span>
+            <span id="a610" class="border-bottom edge-right"></span>
+            
+            <span id="a71" class="edge-left border-top"></span>
+            <span id="a72" class="border-top"></span>
+            <span id="a73" class="border-bottom"></span>
+            <span id="a74" class="border-bottom border-right"></span>
+            <span id="a75" class="border-left"></span>
+            <span id="a76" class="border-right"></span>
+            <span id="a77" class="border-left border-right"></span>
+            <span id="a78" class="border-top border-left border-bottom"></span>
+            <span id="a79" class="border-top border-bottom"></span>
+            <span id="a710" class="border-top edge-right"></span>
+            
+            <span id="a81" class="edge-left border-right"></span>
+            <span id="a82" class="border-left border-right"></span>
+            <span id="a83" class="border-top border-bottom border-left"></span>
+            <span id="a84" class="border-top border-bottom "></span>
+            <span id="a85" class="border-bottom border-right"></span>
+            <span id="a86" class="border-left border-bottom"></span>
+            <span id="a87" class="border-bottom"></span>
+            <span id="a88" class="border-bottom border-top"></span>
+            <span id="a89" class="border-top border-right"></span>
+            <span id="a810" class="border-left edge-right"></span>
+            
+            <span id="a91" class="edge-left border-right"></span>
+            <span id="a92" class="border-left border-bottom"></span>
+            <span id="a93" class="border-top border-bottom"></span>
+            <span id="a94" class="border-top border-bottom"></span>
+            <span id="a95" class="border-top border-bottom"></span>
+            <span id="a96" class="border-top border-right"></span>
+            <span id="a97" class="border left border-top border-bottom"></span>
+            <span id="a98" class="border-top border-right"></span>
+            <span id="a99" class="border-left border-bottom"></span>
+            <span id="a910" class="edge-right"></span>
+            
+            <span id="a101" class="edge-left edge-bottom"></span>
+            <span id="a102" class="border-top edge-bottom"></span>
+            <span id="a103" class="border-top edge-bottom"></span>
+            <span id="a104" class="border-top edge-bottom"></span>
+            <span id="a105" class="border-top edge-bottom border-right"></span>
+            <span id="a106" class="border-left edge-bottom"></span>
+            <span id="a107" class="border-right edge-bottom border-top"></span>
+            <span id="a108" class="border-left edge-bottom"></span>
+            <span id="a109" class="border-top edge-bottom"></span>
+            <span id="a1010" class="end edge-bottom edge-right"></span>
+        </div>
+        <div class="winner">
+            <h2>You Win</h2>
+        </div>
+    </body>
+</html>
