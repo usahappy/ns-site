@@ -19,7 +19,8 @@ body {
     overflow: hidden;
 }
 .maze.container {
-    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, 0);
     position: relative;
     top: 25px;
     height: 450px;
@@ -67,13 +68,13 @@ body {
 }
 
 .maze.player {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     position: absolute;
     background: #df1e2f;
     border-radius: 100%;
     z-index: 100;
-    margin: 15px;
+    margin: 17.5px;
 }
 
 @keyframes scale-easeOutElastic {
