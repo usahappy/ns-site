@@ -83,7 +83,7 @@ $(document).ready(function(){
     
     $(".mobile-controller a").each(function(){
         $(this).on("click",function(){
-            if ($(this).is("#left-button")) {
+            if ($(this).parent().is("#left-button")) {
                 if (!($(".current-position").is(".border-left") || $(".current-position").is(".edge-left"))) {
                     currentColumn -= 1;
 
@@ -92,7 +92,7 @@ $(document).ready(function(){
                     newSquare.addClass("current-position");
                     $(".maze.player").moveTo(newSquare);
                 }
-            } else if ($(this).is("#right-button")) {
+            } else if ($(this).parent().is("#right-button")) {
                 if (!($(".current-position").is(".border-right") || $(".current-position").is(".edge-right"))) {
                     currentColumn += 1;
 
@@ -101,7 +101,7 @@ $(document).ready(function(){
                     newSquare.addClass("current-position");
                     $(".maze.player").moveTo(newSquare);
                 }
-            } else if ($(this).is("#up-button")) {
+            } else if ($(this).parent().is("#up-button")) {
                 if (!($(".current-position").is(".border-top") || $(".current-position").is(".edge-top"))) {
                     currentRow -= 1;
 
@@ -110,7 +110,7 @@ $(document).ready(function(){
                     newSquare.addClass("current-position");
                     $(".maze.player").moveTo(newSquare);
                 }
-            } else if ($(this).is("#down-button")) {
+            } else if ($(this).parent().is("#down-button")) {
                 if (!($(".current-position").is(".border-bottom") || $(".current-position").is(".edge-bottom"))) {
                     currentRow += 1;
 
