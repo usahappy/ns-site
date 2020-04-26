@@ -61,6 +61,8 @@ jQuery.extend( jQuery.easing,
 var currentRow = 1;
 var currentColumn = 1;
 var inMaze = true;
+var deadEndMessages = ["Nope!","You Lose"];
+var deadEndSquares = ["a48","a610","a107","a105"];
 
 $(document).ready(function(){
     (function( $ ) {
@@ -182,9 +184,24 @@ $(document).ready(function(){
             }
         }
         
-        if (currentColumn==10 && currentRow==10) {
-            inMaze=false;
-            setTimeout(function(){$(".winner").addClass("finished");}, 250);
-        }
+        $.each(deadEndSquares, function(){
+            if (("a"+currentRow+""+currentColumn) == this && inMaze) {
+                var msg = deadEndMessages[Math.floor(Math.random() * deadEndMessages.length)];
+                $(".winner h2").text(msg);
+                
+                setTimeout(function(){
+                    $(".winner").removeClass("hiding");
+                    $(".winner").addClass("showing");
+                }, 250);
+                
+                inMaze=false;
+                
+                setTimeout(function(){
+                    $(".winner").removeClass("showing");
+                    $(".winner").addClass("hiding");
+                    inMaze=true;
+                },2500);
+            }
+        });
     });
 });
