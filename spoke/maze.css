@@ -18,15 +18,17 @@ body {
     touch-action: none;
     overflow: hidden;
     height: 100vh;
-    border: 1px solid red;
 }
 .maze.container {
     left: 50%;
     transform: translate(-50%, 0);
+    margin-top: 20px;
     position: relative;
     top: 25px;
-    height: 450px;
-    width: 450px;
+    height: calc(100vw - 100px);
+    width: calc(100vw - 100px);
+    max-height: 450px;
+    max-width: 450px;
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(10,1fr);
