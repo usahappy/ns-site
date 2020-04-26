@@ -37,9 +37,13 @@ body {
 .maze.container span {
     display: block;
     margin: var(--margin-width);
+    background: none;
     /*outline: 1px dashed blue;*/
 }
 
+.maze.container span.end {
+    background: gold;
+}
 
 .border-left {
     border-left: var(--border-width) solid black;
@@ -65,10 +69,6 @@ body {
 }
 .edge-bottom {
     border-bottom: var(--border-width) solid black;
-}
-
-.maze .end {
-     background: #faea18;
 }
 
 .maze.player {
@@ -233,5 +233,21 @@ p.instructions{
     .mobile-controller {
         width: calc(100vh - 100vw - 200px);
         height: calc(100vh - 100vw - 200px);
+    }
+    
+    .maze.player {
+        visibility: hidden;
+    }
+    
+    .maze span.current-position {
+        background-color: #df1e2f;
+    }
+    
+    .winner.showing {
+        animation: none;
+    }
+    
+    .winner.hiding {
+        animation: none;
     }
 }

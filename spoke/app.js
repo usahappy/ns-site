@@ -87,6 +87,7 @@ $(document).ready(function(){
         $(this).on("click",function(){
             if ($(this).parent().is("#left-button")) {
                 if (!($(".current-position").is(".border-left") || $(".current-position").is(".edge-left"))) {
+                    $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                     currentColumn -= 1;
 
                     $(".current-position").removeClass("current-position");
@@ -96,6 +97,7 @@ $(document).ready(function(){
                 }
             } else if ($(this).parent().is("#right-button")) {
                 if (!($(".current-position").is(".border-right") || $(".current-position").is(".edge-right"))) {
+                    $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                     currentColumn += 1;
 
                     $(".current-position").removeClass("current-position");
@@ -105,6 +107,7 @@ $(document).ready(function(){
                 }
             } else if ($(this).parent().is("#up-button")) {
                 if (!($(".current-position").is(".border-top") || $(".current-position").is(".edge-top"))) {
+                    $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                     currentRow -= 1;
 
                     $(".current-position").removeClass("current-position");
@@ -114,6 +117,7 @@ $(document).ready(function(){
                 }
             } else if ($(this).parent().is("#down-button")) {
                 if (!($(".current-position").is(".border-bottom") || $(".current-position").is(".edge-bottom"))) {
+                    $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                     currentRow += 1;
 
                     $(".current-position").removeClass("current-position");
@@ -143,6 +147,7 @@ $(document).ready(function(){
             switch(e.which){
                 case 37: //left arrow
                     if (!($(".current-position").is(".border-left") || $(".current-position").is(".edge-left"))) {
+                        $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                         currentColumn -= 1;
 
                         $(".current-position").removeClass("current-position");
@@ -153,6 +158,7 @@ $(document).ready(function(){
                     break;
                 case 39: //right arrow
                     if (!($(".current-position").is(".border-right") || $(".current-position").is(".edge-right"))) {
+                        $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                         currentColumn += 1;
 
                         $(".current-position").removeClass("current-position");
@@ -163,6 +169,7 @@ $(document).ready(function(){
                     break;
                 case 38: //up arrow
                     if (!($(".current-position").is(".border-top") || $(".current-position").is(".edge-top"))) {
+                        $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                         currentRow -= 1;
 
                         $(".current-position").removeClass("current-position");
@@ -173,11 +180,12 @@ $(document).ready(function(){
                     break;
                 case 40: //down arrow
                     if (!($(".current-position").is(".border-bottom") || $(".current-position").is(".edge-bottom"))) {
+                        $(".maze #a" + currentRow + "" + currentColumn).removeClass("current-position");
                         currentRow += 1;
-
                         $(".current-position").removeClass("current-position");
                         var newSquare = $(".maze #a" + currentRow + "" + currentColumn);
                         newSquare.addClass("current-position");
+                        
                         $(".maze.player").moveTo(newSquare);
                     }
                     break;
@@ -192,7 +200,7 @@ $(document).ready(function(){
                 setTimeout(function(){
                     $(".winner").removeClass("hiding");
                     $(".winner").addClass("showing");
-                }, 250);
+                }, 200);
                 
                 inMaze=false;
                 
@@ -200,7 +208,7 @@ $(document).ready(function(){
                     $(".winner").removeClass("showing");
                     $(".winner").addClass("hiding");
                     inMaze=true;
-                },2500);
+                },2000);
             }
         });
     });
