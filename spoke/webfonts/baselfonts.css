@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Basel-Bold';
+    src: url('basel_bold_macroman/Basel-Bold-webfont.woff2') format('woff2'),
+         url('basel_bold_macroman/Basel-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Basel-BoldItalic';
+    src: url('basel_bolditalic_macroman/Basel-BoldItalic-webfont.woff2') format('woff2'),
+         url('basel_bolditalic_macroman/Basel-BoldItalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Basel-Italic';
+    src: url('basel_italic_macroman/Basel-Italic-webfont.woff2') format('woff2'),
+         url('basel_italic_macroman/Basel-Italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Basel-Regular';
+    src: url('basel_regular_macroman/Basel-Regular-webfont.woff2') format('woff2'),
+         url('basel_regular_macroman/Basel-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
