@@ -1,0 +1,121 @@
+* {
+    --people-cyan: #00b2ec;
+    --people-yellow: #fff000;
+    --rec-lh: 26px;
+}
+
+body {
+    margin: 0;
+    font-family: futura-pt, sans-serif;
+}
+
+.headline {
+    display: grid;
+    --overlap-amount: 90px;
+    grid-template-columns: 100%;
+    grid-template-rows: [row1-start] calc(320px - var(--overlap-amount)) [row2-start] var(--overlap-amount) [row3-start] calc(191px - var(--overlap-amount));
+    margin-bottom: 64px;
+}
+
+.hero-container {
+    background: blue;
+    grid-column: 1;
+    grid-row: row1-start / span 2;
+}
+
+.hero-container h1 {
+    margin: 0;
+    margin-top: 42px;
+    text-align: center;
+    
+    text-transform: uppercase;
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-size: 80px;
+    line-height: 1;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.overlap-container {
+    width: calc(100% - 64px);
+    max-width: 1310px;
+    
+    grid-row: row2-start / span 2;
+    grid-column: 1;
+    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0 32px;
+}
+
+.overlap-info-container {
+    width: 882px;
+    height: 100%;
+    background: white;
+    box-shadow: 6px 6px 0  0 yellow;
+}
+
+.overlap-info {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40px auto;
+}
+
+.source-header {
+    grid-row: 1;
+}
+
+.category-info {
+    grid-row: 2;
+}
+
+.source-header p {
+    margin: 0;
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.source-header svg {
+    height: 20px;
+    transform: translate(0, 4px);
+    fill: var(--people-cyan);
+}
+
+.source-header a {
+    color: black;
+    text-decoration: none;
+    
+    padding: 0 1px;
+    padding-bottom: 2px;
+    background: linear-gradient(black, black);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 calc(100% - 4px);
+}
+
+.source-header a:hover {
+    background-size: 100% 1px;
+}
+
+.category-info h2 {
+    margin: 0;
+    font-family: Basel-Bold, serif;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    line-height: 44px;
+}
+
+.category-info p {
+    margin: 0;
+    margin-top: 8px;
+    
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}

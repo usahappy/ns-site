@@ -6,6 +6,7 @@
 * {
     --people-cyan: #00b2ec;
     --people-yellow: #fff000;
+    --rec-lh: 26px;
 }
 
 body {
@@ -109,6 +110,7 @@ body {
     letter-spacing: 1.3px;
     text-transform: uppercase;
 }
+
 .source-header svg {
     height: 20px;
     transform: translate(0, 4px);
@@ -149,7 +151,7 @@ body {
 }
 
 .article-header h1 {
-    font-family: basel-demo, serif;
+    font-family: Basel-Regular, serif;
     font-weight: 300;
     font-size: 48px;
     line-height: 1.1;
@@ -390,7 +392,7 @@ body {
     padding-top: 14px;
 }
 
-.recommended-article-text span {
+.truncated-text {
     font-family: futura-pt, sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -401,6 +403,22 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 0px;
     background-position: 0 calc(100% - 1px);
+    
+    position: relative;
+    
+    --max-lines: 3;
+    max-height: calc(var(--max-lines) * var(--rec-lh));
+    overflow: hidden;
+    padding-right: 1rem;
+}
+
+.truncated-text::after {
+    content: "...";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
 }
 
 .recommended-article-text a {
@@ -418,4 +436,273 @@ body {
     color: rgba(0,0,0,0.65);
     line-height: 1;
     margin: 10px 0 0 0;
+}
+
+
+/********************************** RESPONSIVENESS & MOBILE OPTIMIZATION **********************************/
+@media screen and (max-width: 1120px) {
+    
+    .navbar {
+        display: none;
+    }
+    
+    .body-container {
+        width: 640px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+    }
+    
+    .share-bar ul {
+        display: block;
+    }
+    
+    .share-bar li.share-button {
+        height: 44px;
+        float: left;
+        width: 90px;
+        margin-right: 15px;
+        border: 1px solid rgba(0,0,0,0.65);
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    
+    .share-bar li.share-button:hover {
+        border: 1px solid rgb(0,0,0);
+    }
+    
+    .share-bar li.share-button a {
+        display: flex;
+        text-align: left;
+        position: relative;
+        border: none;
+    }
+
+    .share-bar li.share-button a:hover {
+        border: none;
+    }
+    
+    .share-button svg {
+        display: block;
+        min-width: 36px;
+        flex-basis: 36px;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    
+    .share-button p {
+        display: block;
+        position: relative;
+        top: 50%;
+        flex-basis: calc(100% - 36px);
+    }
+    
+    .article {
+        width: 100%;
+        display: block;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    .article .article-header {
+        padding-bottom: 20px;
+    }
+    
+    .article-header h4 {
+        margin-top: 20px;
+    }
+    
+    .article-header #publication-info {
+        margin: 10px 0;
+    }
+    
+    .article-ad {
+        display: none;
+    }
+    
+    .recommendation-container {
+        width: 100%;
+    }
+    
+    .recommendation-container .recommendation-content {
+        width: 640px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+        padding-top: 40px;
+    }
+    
+    .recommendation-content .recommendations {
+        column-gap: 24px;
+        height: 300px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .recommendations li {
+        width: calc((100% - 48px) / 3);
+    }
+    
+    .truncated-text {
+        --max-lines: 2;
+        max-height: calc(var(--rec-lh) * var(--max-lines));
+        overflow: hidden;
+        padding-right: 1em;
+        position: relative;
+    }
+    
+    .truncated-text::after {
+        content: "...";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+    }
+    
+    .recommendations li:nth-child(4) {
+        display: none;
+    }
+    
+    .article-body p span.inline-link {
+        box-shadow: inset 0 -3px 0 var(--people-cyan);
+    }
+}
+
+@media screen and (max-width: 690px) {
+    
+    .body-container {
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+    }
+    
+    .source-header {
+        width: calc(100% - 30px);
+    }
+    
+    .share-bar ul {
+        display: block;
+    }
+    
+    .share-bar li.share-button {
+        height: 44px;
+        float: left;
+        width: 90px;
+        margin-right: 15px;
+        border: 1px solid rgba(0,0,0,0.65);
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    
+    .share-bar li.share-button:hover {
+        border: 1px solid rgb(0,0,0);
+    }
+    
+    .share-bar li.share-button a {
+        display: flex;
+        text-align: left;
+        position: relative;
+        border: none;
+    }
+
+    .share-bar li.share-button a:hover {
+        border: none;
+    }
+    
+    .share-button svg {
+        display: block;
+        min-width: 36px;
+        flex-basis: 36px;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    
+    .share-button p {
+        display: block;
+        position: relative;
+        top: 50%;
+        flex-basis: calc(100% - 36px);
+    }
+    
+    .article {
+        width: calc(100% - 30px);
+        display: block;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    .article .article-header {
+        padding-bottom: 20px;
+    }
+    
+    .article-header h1 {
+        font-size: 36px;
+    }
+    
+    .article-header h4 {
+        margin-top: 20px;
+    }
+    
+    .article-header #publication-info {
+        margin: 10px 0;
+    }
+    
+    .article-ad {
+        display: none;
+    }
+    
+    .recommendation-container {
+        width: 100%;
+    }
+    
+    .recommendation-container h2 {
+        font-size: 32px;
+    }
+    
+    .recommendation-container .recommendation-content {
+        width: calc(100% - 30px);
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+        padding-top: 40px;
+    }
+    
+    .recommendations li {
+        width: calc((100% - 24px) / 2);
+    }
+    
+    .recommendation-content .recommendations {
+        height: 300px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    .truncated-text {
+        --max-lines: 3;
+        max-height: calc(var(--rec-lh) * var(--max-lines));
+        padding-right: 1rem;
+        position: relative;
+    }
+    
+    .truncated-text::after {
+        content: "...";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+    }
+    
+    .recommendations li:nth-child(4), .recommendations li:nth-child(3) {
+        display: none;
+    }
 }

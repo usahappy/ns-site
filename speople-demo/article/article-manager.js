@@ -17,7 +17,7 @@ $(document).ready(function() {
         var scrollTop = $(window).scrollTop();
         var scrollBottom = scrollTop + windowHeight;
         
-        if (shareBarOriginHeight - 60 - elemTopPadding <= scrollTop) {
+        if (shareBarOriginHeight - 60 - elemTopPadding <= scrollTop && $(window).width() > 1120) {
             shareBar.addClass('fixed');
             shareBar.css({top: scrollTop - 60});
         } else {
