@@ -1,6 +1,7 @@
 * {
     --people-cyan: #00b2ec;
     --people-yellow: #fff000;
+    --alley-gap: 20px;
 }
 
 a {
@@ -161,6 +162,46 @@ a {
     .navbar {
         height: 60px;
     }
+}
+
+
+.mobile-nav-display {
+    display: none;
+    
+    padding-top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: white;
+    position: absolute;
+    z-index: 100;
+}
+
+.mobile-nav-display-content {
+    width: calc(100% - 32px);
+    font-family: futura-pt, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.mobile-nav-display-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-display-content li {
+    padding: 25px 0;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.mobile-nav-display-content li:first-child {
+    border-top: none;
 }
 
 /************************ FOOTER ************************/
