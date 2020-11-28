@@ -54,6 +54,8 @@ a {
     width: 100%;
     top: 0;
     left: 0;
+    
+    overflow: scroll;
     position: absolute;
     
     background: var(--people-cyan);
@@ -96,6 +98,7 @@ a {
     
     font-family: acumin-pro-extra-condensed, sans-serif;
     font-size: 52px;
+    line-height: 54px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: white;
