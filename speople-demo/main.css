@@ -67,7 +67,7 @@ a {
 }
 
 .letter-closing-button {
-    position: absolute;
+    position: fixed;
     display: block;
     height: 100vh;
     width: 100%;
@@ -141,6 +141,7 @@ a {
     display: table;
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 80px;
     font-size: 24px;
 }
 
