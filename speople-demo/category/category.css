@@ -145,6 +145,7 @@ body {
     width: calc(100% - 64px);
     max-width: 1310px;
     
+    margin-bottom: 64px;
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
