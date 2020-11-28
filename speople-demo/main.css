@@ -19,6 +19,128 @@ a {
     color: black;
 }
 
+.footer {
+    margin-bottom: 80px;
+}
+
+.screen-notice {
+    display: block;
+    width: 100%;
+    background: var(--people-purple);
+    box-shadow: 0 -2px 6px 0 rgba(0,0,0,0.15);
+    position: fixed;
+    bottom: 0;
+    z-index: 100000;
+}
+
+.screen-notice a {
+    display: block;
+    color: white;
+    padding: 16px 0;
+    
+    text-align: center;
+    font-family: futura-pt, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.letter-from-editors {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    
+    background: var(--people-cyan);
+    
+    z-index: 100000;
+    
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.letter-closing-button {
+    position: absolute;
+    display: block;
+    height: 100vh;
+    width: 100%;
+}
+
+.letter-header-container {
+    width: calc(100% - 64px);
+    max-width: 1100px;
+    margin-top: 48px;
+    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.letter-from-editors svg {
+    display: inline-block;
+    width: 250px;
+    fill: var(--people-cyan);
+}
+
+.letter-from-editors svg path#stroke {
+    fill: white;
+}
+
+.letter-from-editors h2 {
+    margin: 0;
+    
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-size: 52px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.letter-card {
+    --padding-amount: 24px;
+    width: calc(100% - 64px - (var(--padding-amount) * 2));
+    max-width: calc(1100px - (var(--padding-amount) * 2));
+    background: white;
+    
+    margin-top: 36px;
+    padding: var(--padding-amount);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    box-shadow: 6px 6px 0 0 var(--people-yellow);
+}
+
+.letter-card p {
+    font-family: lora, serif;
+    font-size: 18px;
+    letter-spacing: 0.75px;
+    line-height: 28px;
+    
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.letter-card p:last-child {
+    margin-bottom: 0;
+}
+
+.exit-hint {
+    color: #007ab3;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: table;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
 /* --------- PAGE CONTENT (ROW 1) --------- */
 .body-container {
     width: 100%;
@@ -799,7 +921,6 @@ img {
     
     
     /* THE LATEST */
-        /* THE LATEST */
     .latest-ladder {
         width: 100%;
         display: block;
