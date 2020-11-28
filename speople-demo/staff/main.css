@@ -19,6 +19,7 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     padding-top: 135px;
+    margin-bottom: 48px;
 }
 
 .staff-ladder-container ul {
