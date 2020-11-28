@@ -255,6 +255,7 @@ body {
 .recommendation-container {
     margin-top: 65px;
     border-top: 1px solid var(--people-cyan);
+    margin-bottom: 48px;
 }
 
 .recommendation-container .recommendation-content {
@@ -279,7 +280,6 @@ body {
 }
 
 .recommendations {
-    height: 400px;
     display: flex;
     column-gap: 24px;
     
@@ -289,10 +289,16 @@ body {
 
 .recommended-article-container {
     border: 1px solid rgba(0,0,0,0.15);
-    width: calc((100% - 72px) / 4);
+    --max-lines: 3;
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto calc((var(--max-lines) * var(--rec-lh)) + 60px);
 }
 
 .recommended-article-image-container {
+    grid-row: 1;
     display: block;
     position: relative;
     width: 100%;
@@ -317,6 +323,7 @@ body {
 }
 
 .recommended-article-text {
+    grid-row: 2;
     padding: 18px;
     padding-top: 14px;
 }
@@ -335,12 +342,24 @@ body {
     
     position: relative;
     
-    --max-lines: 3;
     max-height: calc(var(--max-lines) * var(--rec-lh));
     overflow: hidden;
     padding-right: 1rem;
 }
 
+.truncated-text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left:  0;
+    height: var(--rec-lh);
+    width: 100%;
+    width: 100%;
+    background: linear-gradient(to top, white, #ffffff00 150%);
+}
+
+/*
 .truncated-text::after {
     content: "...";
     display: block;
@@ -348,7 +367,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: 1000;
-}
+} */
 
 .recommended-article-text a {
     text-decoration: none;
@@ -477,15 +496,6 @@ body {
         position: relative;
     }
     
-    .truncated-text::after {
-        content: "...";
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 1000;
-    }
-    
     .recommendations li:nth-child(4) {
         display: none;
     }
@@ -607,7 +617,7 @@ body {
     }
     
     .recommendation-content .recommendations {
-        height: 300px;
+        height: auto;
         padding: 0;
         margin: 0;
         position: relative;
@@ -620,15 +630,6 @@ body {
         max-height: calc(var(--rec-lh) * var(--max-lines));
         padding-right: 1rem;
         position: relative;
-    }
-    
-    .truncated-text::after {
-        content: "...";
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 1000;
     }
     
     .recommendations li:nth-child(4), .recommendations li:nth-child(3) {
