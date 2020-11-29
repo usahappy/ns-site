@@ -1,0 +1,191 @@
+html {
+    --side-margin: 32px;
+    --alley-width: 50px;
+    --entry-row-gap: 40px;
+    
+    --medium-blue: #0d344c;
+    --light-blue: #0c5c84;
+    --near-black: #060d11;
+    --crimson: #7f1412;
+    --red: #c40505;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: sofia-pro, sans-serif;
+    margin: 0;
+    color: var(--near-black);
+}
+
+.content-section::before {
+    background: var(--medium-blue);
+    display: block;
+    content: '';
+    
+    position: absolute;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content-section {
+    background: white;
+    width: calc(100% - (var(--side-margin) * 2));
+    max-width: 1150px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    grid-column: content-start;
+    display: grid;
+    
+    grid-template-columns: [titlecol-start] calc(50% - var(--alley-width) - 100px) [alley-start] var(--alley-width) [infocol-start] auto; 
+}
+
+.content-section h2, .entry-list {
+    padding-top: var(--entry-row-gap);
+}
+
+.content-section h2 {
+    background: var(--medium-blue);
+    color: white;
+    
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    grid-column: titlecol-start;
+    padding-right: var(--alley-width);
+    text-align: right;
+}
+
+.entry-list {
+    grid-column: infocol-start;
+    list-style: none;
+    padding-left: 0;
+}
+
+.entry-list h3 {
+    color: var(--light-blue);
+    font-size: 26px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.sub-detail {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 200;
+}
+
+.last-sub-detail {
+    margin-bottom: 7px;
+}
+
+.entry-list > li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    
+    width: calc(100% - var(--side-margin));
+    max-width: 820px;
+}
+
+.entry-details {
+    color: var(--near-black);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    list-style: none;
+    padding: 0;
+}
+
+.entry-details li:not(.sub-detail) {
+    --tab-distance: 25px;
+    opacity: 0.85;
+    padding-left: var(--tab-distance);
+    margin-top: 8px;
+    position: relative;
+}
+
+.entry-details li:not(.sub-detail)::before {
+    content: url('data:image/svg+xml; utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve"> <g> <polygon class="st0" points="157.89,300 0,300 0,142.11 	"/> <polygon class="st0" points="300,221.04 300,300 221.06,300 0,78.96 0,0 78.96,0 	"/> <polygon class="st0" points="300,0 300,157.89 142.11,0 	"/></g></svg>');
+    display: inline-block;
+    position: absolute;
+    left: calc(var(--tab-distance) - 14px);
+    top: 0;
+    transform: translate(0, -2.5px);
+    width: 8px;
+    fill: var(--medium-blue);
+}
+
+
+
+
+@media screen and (max-width: 1020px) {
+    html {
+        --alley-width: 30px;
+    }
+    
+    .content-section {
+        grid-template-columns: [titlecol-start] calc(50% - var(--alley-width) - 150px) [alley-start] var(--alley-width) [infocol-start] auto;
+    }
+    
+    .content-section h2 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    html {
+        --entry-row-gap: 0;
+    }
+    
+    .content-section {
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px auto;
+    }
+    
+    .content-section h2 {
+        width: calc(100% - (var(--side-margin) * 2));
+        grid-column: 1;
+        grid-row: 1;
+        
+        padding: 20px var(--side-margin) 0;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .entry-list {
+        width: calc(100% - (var(--side-margin) * 2));
+        padding: 20px var(--side-margin) 40px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .entry-list > li {
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .entry-list > li:not(:first-of-type) {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0,0,0,0.15);
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .entry-list h3 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
