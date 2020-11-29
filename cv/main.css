@@ -96,7 +96,9 @@ body {
 
 .entry-details {
     color: var(--near-black);
-    font-size: 20px;
+    
+    --font-size: 20px;
+    font-size: var(--font-size);
     font-weight: 300;
     line-height: 22px;
     list-style: none;
@@ -118,7 +120,8 @@ body {
     left: calc(var(--tab-distance) - 14px);
     top: 0;
     transform: translate(0, -2.5px);
-    width: 8px;
+    width: calc(var(--font-size) / 2.5);
+    min-width: 7px;
     fill: var(--medium-blue);
 }
 
@@ -148,7 +151,7 @@ body {
     .content-section {
         width: 100%;
         grid-template-columns: 100%;
-        grid-template-rows: 75px auto;
+        grid-template-rows: auto auto;
     }
     
     .content-section h2 {
@@ -156,7 +159,7 @@ body {
         grid-column: 1;
         grid-row: 1;
         
-        padding: 20px var(--side-margin) 0;
+        padding: 20px var(--side-margin);
         margin: 0;
         text-align: left;
     }
@@ -187,5 +190,9 @@ body {
     .entry-list h3 {
         font-size: 24px;
         line-height: 26px;
+    }
+    
+    .entry-details {
+        --font-size: 16px;
     }
 }
